@@ -4,106 +4,113 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    overflow: hidden;
 }
-.container{
-    width: 1200px;
-    margin: auto;
-    button{
-        font-size: 16px;
-        padding: 6px 10px;
-        color: #000;
-        background-color: transparent;
-        border: 1px solid green;
-        border-radius: 5px;
-        outline: none;
-        display: block;
-        margin-top: 20px;
-    }
-    .main-header{
-        margin-top: 50px;
-        padding: 50px;
-        background: #ddd;
-        width: 600px;
-        margin: auto;
-        h2{
-            font-size: 25px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        ul{
-            list-style: number;
-            margin: 0;
-            padding: 0;
-            li{
-                margin-top: 10px;
-                background-color: #fff;
-                a{
-                    font-size: 16px;
-                    padding: 6px 10px;
-                    display: inline-block;
-                    text-decoration: none;
-                    color: #000;
-                }
-            }
-        }
-    }
 
-}
 // Draggable Div Section
 .wrapper{
-    position: absolute;
-    max-width: 450px;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    background: rgb(206, 204, 204);
-    border-radius: 10px;
-    transform: translate(-50%, -50%);
-    box-shadow: 10px 10px 15px rgba(0,0,0,0.06);
-    header{
-        font-size: 23px;
-        font-weight: 500;
-        padding: 17px 30px;
-        border-bottom: 1px solid rgb(5, 1, 1);
-        text-transform: uppercase;
+    #firstClick1{
+        top: 32%;
+        left: 34%;
+    }
+    .box-content, .box-content1{
+        position: absolute;
+        top: 30%;
+        left: 30%;
+        width: 50%;
+        background: rgb(206, 204, 204);
+        border-radius: 10px;
+        transform: translate(-50%, -50%);
+        box-shadow: 10px 10px 15px rgba(0,0,0,0.06);
+        resize: both;
+        overflow: hidden;
+        height: 50%;
+        header{
+            font-size: 23px;
+            font-weight: 500;
+            padding: 17px 30px;
+            border-bottom: 1px solid rgb(5, 1, 1);
+            text-transform: uppercase;
+        }
         .active{
             cursor: move;
             user-select: none;
         }
-    }
-    .content{
-        display: flex;
-        padding: 30px 30px 40px 30px;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        .title{
-            margin: 15px 0;
-            font-size: 29px;
-            font-weight: 500;
-        }
-        .icon{
-            height: 50px;
-            width: 50px;
-            border-radius: 50%;
-            border: 3px solid #6f6f6f;
+        .content{
             display: flex;
+            padding: 30px 30px 40px 30px;
             align-items: center;
+            flex-direction: column;
             justify-content: center;
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            i{
-                color: #000000;
-                font-size: 20px;
+            .title{
+                margin: 15px 0;
+                font-size: 29px;
+                font-weight: 500;
             }
-        }
-        p{
-            font-size: 14px;
-            text-align: center;
+            .icon{
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                display: flex;
+                .icons{
+                    width: 15px;
+                    height: 15px;
+                    background: #ffd050;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                }
+                .fullscreen{
+                    background: #83CA49;
+                }
+                .close{
+                    background: red;
+                }
+            }
+            p{
+                font-size: 14px;
+                text-align: center;
+            }
         }
     }
 }
 
+// mak  Menu part
+.menu-part{
+    position: absolute;
+    bottom: 50px;
+    left: 20%;
+    background: #ddd;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    .main-menu {
+        padding: 20px;
+        font-size: 40px;
+        transition: all .5s;
+        transform: scale(1);
+        line-height: 0;
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+        &:hover {
+            transform: scale(2);
+        }
+    }
+}
+
+
+.show{
+    border-bottom: 2px solid red !important;
+}
+.show1{
+    display: none;
+}
+
+
+// resize Window
+.resizewin{
+    width: 1500px;
+}
 
 

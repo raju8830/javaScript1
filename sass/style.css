@@ -2,140 +2,109 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
 }
 
-.container {
-  width: 1200px;
-  margin: auto;
+.wrapper #firstClick1 {
+  top: 32%;
+  left: 34%;
 }
-
-.container button {
-  font-size: 16px;
-  padding: 6px 10px;
-  color: #000;
-  background-color: transparent;
-  border: 1px solid green;
-  border-radius: 5px;
-  outline: none;
-  display: block;
-  margin-top: 20px;
-}
-
-.container .main-header {
-  margin-top: 50px;
-  padding: 50px;
-  background: #ddd;
-  width: 600px;
-  margin: auto;
-}
-
-.container .main-header h2 {
-  font-size: 25px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.container .main-header ul {
-  list-style: number;
-  margin: 0;
-  padding: 0;
-}
-
-.container .main-header ul li {
-  margin-top: 10px;
-  background-color: #fff;
-}
-
-.container .main-header ul li a {
-  font-size: 16px;
-  padding: 6px 10px;
-  display: inline-block;
-  text-decoration: none;
-  color: #000;
-}
-
-.wrapper {
+.wrapper .box-content, .wrapper .box-content1 {
   position: absolute;
-  max-width: 450px;
-  top: 50%;
-  left: 50%;
-  width: 100%;
+  top: 30%;
+  left: 30%;
+  width: 50%;
   background: #cecccc;
   border-radius: 10px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.06);
-          box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.06);
+  transform: translate(-50%, -50%);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.06);
+  resize: both;
+  overflow: hidden;
+  height: 50%;
 }
-
-.wrapper header {
+.wrapper .box-content header, .wrapper .box-content1 header {
   font-size: 23px;
   font-weight: 500;
   padding: 17px 30px;
   border-bottom: 1px solid #050101;
   text-transform: uppercase;
 }
-
-.wrapper header .active {
+.wrapper .box-content .active, .wrapper .box-content1 .active {
   cursor: move;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
 }
-
-.wrapper .content {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.wrapper .box-content .content, .wrapper .box-content1 .content {
   display: flex;
   padding: 30px 30px 40px 30px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
-
-.wrapper .content .title {
+.wrapper .box-content .content .title, .wrapper .box-content1 .content .title {
   margin: 15px 0;
   font-size: 29px;
   font-weight: 500;
 }
-
-.wrapper .content .icon {
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  border: 3px solid #6f6f6f;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.wrapper .box-content .content .icon, .wrapper .box-content1 .content .icon {
   position: absolute;
   top: 10px;
   right: 10px;
+  display: flex;
 }
-
-.wrapper .content .icon i {
-  color: #000000;
-  font-size: 20px;
+.wrapper .box-content .content .icon .icons, .wrapper .box-content1 .content .icon .icons {
+  width: 15px;
+  height: 15px;
+  background: #ffd050;
+  border-radius: 50%;
+  margin-right: 10px;
 }
-
-.wrapper .content p {
+.wrapper .box-content .content .icon .fullscreen, .wrapper .box-content1 .content .icon .fullscreen {
+  background: #83CA49;
+}
+.wrapper .box-content .content .icon .close, .wrapper .box-content1 .content .icon .close {
+  background: red;
+}
+.wrapper .box-content .content p, .wrapper .box-content1 .content p {
   font-size: 14px;
   text-align: center;
 }
+
+.menu-part {
+  position: absolute;
+  bottom: 50px;
+  left: 20%;
+  background: #ddd;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.menu-part .main-menu {
+  padding: 20px;
+  font-size: 40px;
+  transition: all 0.5s;
+  transform: scale(1);
+  line-height: 0;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+.menu-part .main-menu:hover {
+  transform: scale(2);
+}
+
+.show {
+  border-bottom: 2px solid red !important;
+}
+
+.show1 {
+  display: none;
+}
+
+.resizewin {
+  width: 1500px;
+}
+
 /*# sourceMappingURL=style.css.map */
